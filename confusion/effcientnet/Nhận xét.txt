@@ -1,6 +1,6 @@
 Sai nhiều nhất (sai trên 15 video validation):
 
-FrontCrawl (bơi sải) => BreastStroke (bơi ếch): 21 video
+31-FrontCrawl (bơi sải) => 18-BreastStroke (bơi ếch): 21 video
 - 2 lớp đều có chung khung cảnh ở hồ bơi, 1 người đang bơi
 - khó phân biệt dựa vào chuyển động chân bởi các góc quay khác nhau và chân bị gây nhiễu bởi nước
 - khi bơi sải được quay ở góc sau lưng/trước mặt mà cả người không duỗi thẳng (hoặc duỗi nhưng không thấy rõ trong video) thì dễ bị nhận nhầm thành bơi ếch
@@ -11,25 +11,44 @@ khi động tác đó lặp lại nhiều lần thì mình lấy nhiều frame d
 
 
 
-77 => 19: 15 video
+77-ShavingBeard (cạo râu) => 19-BrushingTeeth (đánh răng): 15 video
+- video nhận diện sai khi cạo râu vùng gần miệng
+
+
+
+19-BrushingTeeth (đánh răng) =>  77-ShavingBeard (cạo râu): 16 video
+- video nhận diện sai khi góc quay xa, không cận mặt thấy rõ đang đánh răng
 
 
 
 
-19 =>  77: 16 video
+39-HighJump (nhảy cao) =>  44-JavelinThrow (phóng lao): 18 video
+- động tác chiếm nhiều thời gian (frame) trong 2 hành động này là chạy lấy đà: trông khá giống nhau
+- 2 hành động chỉ được phân biệt rõ thông qua động tác thực hiện ở cuối video (nhảy hay phóng lao)
+====> khi lấy frame đều theo từng quãng thời gian thì có thể bỏ qua sự quan trọng của động tác cuối video
 
 
 
 
-
-39 =>  44: 18 video
-
-
-
-
-nhiều hành động => 44
+nhiều hành động => 44JavelinThrow (phóng lao)
+- lý do tương tự như trên
 
 
 
+34-HammerThrow (ném tạ) => 92-ThrowDiscus  (ném đĩa): 17 video
+- đây là 2 hành động khó phân biệt cho máy, con người thì dựa vào vật thể mà vđv cầm trên tay,
+nhưng video độ phân giải thấp và vật thể cũng khá nhỏ, và các phương pháp đang thử không chú trọng đến các chi tiết trong frame ảnh
+nên dẫn đến nhầm lẫn
+- chuyển động quay của người trong 2 hành động này gần giống nhau; chỉ khác về vị trí cánh tay
+khi hành động ném tạ thì 2 tay chụm lại để cầm, còn nén đĩa thì 2 tay gần giống với đưa ngang ra.
+- nhiều video sai có góc quay bị chắn bởi tấm lưới => bị nhiễu.
+- các video sai có đoạn đứng yên quay tạ xoay quanh đầu ngắn hơn so với video quay tạ được dự đoán đúng.
+====>>>> nhược điểm của lấy frame theo từng quãng thời gian bằng nhau. ===>>>> có thể xem xét cách lấy frame phù hợp hơn như dựa theo sự thay đổi chuyển động
 
-34 => 92: 17 video
+
+
+NHẬN XÉT TỔNG:
+- Sai do không nhận diện được vật thể đi kèm với hành động có trong ảnh.
+- Sai do việc lấy 10 frame trong 1 video cách đều từng khoảng thời gian dẫn tới có thể bỏ qua tính quan trọng của
+một phân đoạn hành động.
+- Sai do nhiễu ở khung cảnh xung quanh, và các hướng quay khác nhau
