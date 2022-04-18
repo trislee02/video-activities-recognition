@@ -1,0 +1,35 @@
+Sai nhiều nhất (sai trên 15 video validation):
+
+FrontCrawl (bơi sải) => BreastStroke (bơi ếch): 21 video
+- 2 lớp đều có chung khung cảnh ở hồ bơi, 1 người đang bơi
+- khó phân biệt dựa vào chuyển động chân bởi các góc quay khác nhau và chân bị gây nhiễu bởi nước
+- khi bơi sải được quay ở góc sau lưng/trước mặt mà cả người không duỗi thẳng (hoặc duỗi nhưng không thấy rõ trong video) thì dễ bị nhận nhầm thành bơi ếch
+- khi bơi chậm, nếu sải tay di chuyển chậm mà sao cho 2 cánh tay vươn ra phía trước và lúc đó 2 tay đưa rộng ra 2 bên
+ thì cũng bị nhận nhầm thành bơi ếch
+ ===>> xét ảnh 1 động tác thì động tác đó là 1 phần của hành động A, nhưng cũng là động tác xuất hiện trong hành động B
+khi động tác đó lặp lại nhiều lần thì mình lấy nhiều frame dính động tác đó sẽ dẫn đến nhầm lẫn sang hành động B
+
+
+
+77 => 19: 15 video
+
+
+
+
+19 =>  77: 16 video
+
+
+
+
+
+39 =>  44: 18 video
+
+
+
+
+nhiều hành động => 44
+
+
+
+
+34 => 92: 17 video
