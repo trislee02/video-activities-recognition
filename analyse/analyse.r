@@ -32,7 +32,7 @@ x = seq(0.05, 1, by=0.05)
 pArr = c()
 for (DELTA in x)
 {
-  conditions = top_1_score < DELTA
+  conditions = top_1_score <= DELTA
   pCondition = length(top_1_score[conditions]) / length(top_1_score)
   ### Phan tram top1 dúng
   pWrongPred = length(top_1_label[(top_1_label != true_label) & (conditions)]) / length(top_1_label)
@@ -42,6 +42,7 @@ for (DELTA in x)
 }
 pArr
 plot(x,pArr, main='p(pred = wrong|top1 < delta)', xlab='delta', ylab='p')
+
 
 library(dplyr)
 df_grp_vid = df %>% group_by(video_id, true_label, top_1_label) %>%
