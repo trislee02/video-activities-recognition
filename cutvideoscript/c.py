@@ -10,10 +10,16 @@ def cutSegments(vidPath, segments):
   rootVidName = vidPath.split(".")[0];
   for seg in segments:
     classDir = "./"+str(seg['class']);
-    segVidPath = classDir+"/"+str(seg['class'])+"-"+rootVidName+"_"+str(seg['from'])+"_"+str(seg['to'])+".mp4";
     createDirIfNotExists(classDir);
-    segVid = rootVid.subclip(seg['from'], seg['to']);
-    segVid.write_videofile(filename=segVidPath,audio=False);
+    # Cut into smaller 5s video
+    j = 1;
+    for f in range(seg['from'], seg['to'], 5):
+      t = f + 5;
+      if t > seg['to']: t = seg['to'];
+      segVidPath = classDir+"/"+str(seg['class'])+"-"+rootVidName+"_"+str(seg['from'])+"_"+str(seg['to'])+"("+str(j)+")"+".mp4";
+      segVid = rootVid.subclip(f, t);
+      segVid.write_videofile(filename=segVidPath,audio=False);
+      j+=1;
 
 def fTime2Sec(fTimeStr):
   tElements = fTimeStr.split(":");
