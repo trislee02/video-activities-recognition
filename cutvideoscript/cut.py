@@ -12,14 +12,19 @@ def cutSegments(vidPath, segments):
     classDir = "./"+str(seg['class']);
     createDirIfNotExists(classDir);
     # Cut into smaller 5s video
-    j = 1;
-    for f in range(seg['from'], seg['to'], 5):
-      t = f + 5;
-      if t > seg['to']: t = seg['to'];
-      segVidPath = classDir+"/"+str(seg['class'])+"-"+rootVidName+"_"+str(seg['from'])+"_"+str(seg['to'])+"("+str(j)+")"+".mp4";
-      segVid = rootVid.subclip(f, t);
+    if autoCut > 0:
+      j = 1;
+      for f in range(seg['from'], seg['to'], autoCut):
+        t = f + autoCut;
+        if t > seg['to']: t = seg['to'];
+        segVidPath = classDir+"/"+str(seg['class'])+"-"+rootVidName+"_"+str(seg['from'])+"_"+str(seg['to'])+"("+str(j)+")"+".mp4";
+        segVid = rootVid.subclip(f, t);
+        segVid.write_videofile(filename=segVidPath,audio=False);
+        j+=1;
+    else:
+      segVidPath = classDir+"/"+str(seg['class'])+"-"+rootVidName+"_"+str(seg['from'])+"_"+str(seg['to'])+".mp4";
+      segVid = rootVid.subclip(seg['from'], seg['to']);
       segVid.write_videofile(filename=segVidPath,audio=False);
-      j+=1;
 
 def fTime2Sec(fTimeStr):
   tElements = fTimeStr.split(":");
@@ -30,6 +35,7 @@ def fTime2Sec(fTimeStr):
   return sec;
 
 idxFilePath = input("Nhap duong dan file index (*.txt): ");
+autoCut = input("Muon tu dong cat thanh video nho hon k giay khong? Co thi nhap so k > 0, khong thi nhap 0: ");
 idxFile = open(idxFilePath);
 
 lines = idxFile.readlines();
