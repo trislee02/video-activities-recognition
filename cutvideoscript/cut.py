@@ -25,6 +25,7 @@ def cutSegments(vidPath, segments):
       segVidPath = classDir+"/"+str(seg['class'])+"-"+rootVidName+"_"+str(seg['from'])+"_"+str(seg['to'])+".mp4";
       segVid = rootVid.subclip(seg['from'], seg['to']);
       segVid.write_videofile(filename=segVidPath,audio=False);
+  rootVid.close();
 
 def fTime2Sec(fTimeStr):
   tElements = fTimeStr.split(":");
@@ -35,7 +36,8 @@ def fTime2Sec(fTimeStr):
   return sec;
 
 idxFilePath = input("Nhap duong dan file index (*.txt): ");
-autoCut = input("Muon tu dong cat thanh video nho hon k giay khong? Co thi nhap so k > 0, khong thi nhap 0: ");
+autoCut = int(input("Muon tu dong cat thanh video nho hon k giay khong? Co thi nhap so k > 0, khong thi nhap 0: "));
+isRmRootVid = int(input("Muon xoa video goc khong? (1/0): "));
 idxFile = open(idxFilePath);
 
 lines = idxFile.readlines();
@@ -55,5 +57,7 @@ for l in lines:
     segments.append(seg);
   # handle with index info
   cutSegments(vidPath, segments);
+  if isRmRootVid == 1:
+    os.remove(vidPath);
 
 idxFile.close();
