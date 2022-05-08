@@ -1,0 +1,23 @@
+Guide to use the download & cut video tool:
+
+Installation:
+- pip install 'TikTokApi==4.1.0'
+- pip install playwright
+- pip install pytube
+
+- Step 1: Copy folder download_and_cut_video_tool -> this is the folder for you to create new dataset
+- Step 2: List all of your videos in the file videolist.txt (both youtube & tiktok videos are good)
+E.g https://www.tiktok.com/@sikatako133twins/video/7061826818545814810 1 0:00 1:00 0
+- Step 3: run generateDataset.py. This code will download videos listed in videolist.txt & cut them and put into corresponding dataset folder,
+then save their information into videos.json (downloaded, cut, file_name). All folders will be generated automatically.
++ Next time you run generateDataset.py, all videos which have been downloaded/cut will be skipped (unless you change the config in videos.json)
+- Step 4: use function removeVideo(youtube/tiktok url) in generateDataset.py to remove a video from the dataset and videos.json
+- Step 5: list.py -> see the total duration of each class
+
+*** Video link format:
+- youtube link format: https://www.youtube.com/watch?v=l6RhM7wKODI
+-> https://www.youtube.com/watch?v=videoId
+- tiktok link format: https://www.tiktok.com/@shaniyahhday/video/6962788712673463558
+->https://www.tiktok.com/@user_name/video/videoId
+
+Have a nice day!
