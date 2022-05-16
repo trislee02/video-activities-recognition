@@ -16,7 +16,7 @@ TRAIN_RATIO = 70;
 TEST_RATIO = 100 - TRAIN_RATIO;
 
 listRootPath = './traintestlist/';
-dataRootPath = "./SEAGS7/";
+dataRootPath = "./SEAGS_V1/";
 
 rootList = [];
 trainList = [];

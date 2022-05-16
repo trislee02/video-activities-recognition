@@ -1,7 +1,7 @@
 import os;
 
 writeRootPath = './traintestlist/';
-readRootPath = "./SEAGS7/";
+readRootPath = "./SEAGS_V1/";
 
 dirList = os.listdir(readRootPath);
 

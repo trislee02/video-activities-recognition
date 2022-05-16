@@ -1,7 +1,7 @@
 # v_<FolderName>_<index>.mp4
 import os;
 
-path = "./SEAGS7/";
+path = "./SEAGS_V1/";
 dirList = os.listdir(path);
 
 for dir in dirList:
