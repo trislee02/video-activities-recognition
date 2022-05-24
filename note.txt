@@ -1,0 +1,28 @@
+Latex
+Overleaf
+---------------------
+
+IEEE Template Conference
+https://easychair.org/conferences/?conf=ssict2022
+
+Nộp bài
+Email SV
+ghi đủ thành viên trong nhóm
+Bắt đầu nộp từ 0g sáng thứ hai đến 23:59:59 tối chủ nhật
+v1-
+v2-
+v3-
+v4-
+v5-
+
+
+
+% Chúng tôi đề xuất giải pháp mới và đơn giản để phát hiện video mặt người giả.
+We propose a new and simple solution for fake face video detection.
+
+Grammarly
+--------------------------
+
+Đăng ký mã số ORCID
+
+Abstract
