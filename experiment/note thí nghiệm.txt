@@ -3,7 +3,7 @@ chuẩn bị dataset SEAGS_V1 theo cấu trúc giống như UCF101
 1. Không dùng Embedded motion:
 chạy 5 backbone () với dataset SEAGS_V1 với phương pháp Single Frame không dùng embedded motion
 
-chạy phương pháp ensemble (lấy trung bình 5 backbone)
+chạy ensemble (lấy trung bình 5 backbone)
 
 2. Dùng Embedded motion:
 chạy backbone EffcientNet với dataset SEAGS_V1 với phương pháp Single Frame có dùng embedded motion

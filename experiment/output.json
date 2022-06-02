@@ -1,0 +1,97 @@
+{
+  "collection": {
+    "Arnis": {
+      "videos": 160,
+      "sum_dura": 1600.5699999999995,
+      "avg_dura": 10.003562499999997,
+      "type_count": [
+        0,
+        0,
+        0,
+        160
+      ]
+    },
+    "BillardsSnooker": {
+      "videos": 158,
+      "sum_dura": 1580.2899999999997,
+      "avg_dura": 10.001835443037972,
+      "type_count": [
+        0,
+        0,
+        0,
+        158
+      ]
+    },
+    "Bodybuilding": {
+      "videos": 150,
+      "sum_dura": 1500.2999999999997,
+      "avg_dura": 10.001999999999999,
+      "type_count": [
+        0,
+        0,
+        0,
+        150
+      ]
+    },
+    "Chinlone": {
+      "videos": 156,
+      "sum_dura": 1560.4799999999996,
+      "avg_dura": 10.00307692307692,
+      "type_count": [
+        0,
+        0,
+        0,
+        156
+      ]
+    },
+    "Dives": {
+      "videos": 163,
+      "sum_dura": 1630.2399999999998,
+      "avg_dura": 10.001472392638036,
+      "type_count": [
+        0,
+        0,
+        0,
+        163
+      ]
+    },
+    "Muay": {
+      "videos": 162,
+      "sum_dura": 1620.3099999999997,
+      "avg_dura": 10.001913580246912,
+      "type_count": [
+        0,
+        0,
+        0,
+        162
+      ]
+    },
+    "PencakSilat": {
+      "videos": 99,
+      "sum_dura": 949.9599999999998,
+      "avg_dura": 9.595555555555555,
+      "type_count": [
+        1,
+        16,
+        41,
+        41
+      ]
+    },
+    "SepakTakraw": {
+      "videos": 121,
+      "sum_dura": 825.66,
+      "avg_dura": 6.823636363636363,
+      "type_count": [
+        2,
+        35,
+        60,
+        24
+      ]
+    }
+  },
+  "minLen:": 1.0,
+  "maxLen:": 57.42,
+  "meanLen:": 9.638845166809237,
+  "totalVideos:": 1169,
+  "totalDurations:": 11267.809999999998
+}

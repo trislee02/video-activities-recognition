@@ -1,0 +1,20 @@
+{
+  "collection": {
+    "39": {
+      "videos": 1,
+      "sum_dura": 5.0,
+      "avg_dura": 5.0,
+      "type_count": [
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  "minLen:": 5.0,
+  "maxLen:": 5.0,
+  "meanLen:": 5.0,
+  "totalVideos:": 1,
+  "totalDurations:": 5.0
+}
